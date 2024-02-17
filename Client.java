@@ -12,7 +12,7 @@ public class Client { //класс клиента(данные о доставк
 
     public Client(HttpServletRequest request){
         this.name = request.getParameter("name");
-        this.number_phone = Integer.parseInt(request.getParameter("number_phone"));
+        this.number_phone = Integer.parseInt(request.getParameter("phone"));
         this.email = request.getParameter("email");
         this.address = request.getParameter("address");
     }

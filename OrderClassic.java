@@ -20,7 +20,7 @@ public class OrderClassic { //класс стандартного заказа(�
 
     public OrderClassic(HttpServletRequest request) {
         this.name_pizza = request.getParameter("name_pizza");
-        this.topping = request.getParameterValues("top");
+        this.topping = request.getParameterValues("topping");
     }
 
     public Integer getId() {

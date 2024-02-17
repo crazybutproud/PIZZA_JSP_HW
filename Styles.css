@@ -1,0 +1,93 @@
+.main {
+    border: 5px solid darkred;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.94);
+    text-align: left;
+    background: rgba(245, 245, 245, 0.78);
+
+}
+body {
+    background-color: whitesmoke;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    font-family: "Courier New", Courier, monospace;
+    font-size: large;
+    display: flex;
+    align-items: center;
+    background-image: url("https://phonoteka.org/uploads/posts/2021-04/1619414587_20-phonoteka_org-p-fon-dlya-menyu-pitstsi-27.jpg");
+    background-size: auto;
+}
+
+.delivery,.box {
+    border:5px solid brown;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.94);
+    text-align: left;
+    margin: 20px;
+    font-family: "Courier New", Courier, monospace;
+}
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+button[type="submit"] {
+    background-color: indianred;
+    width: 180px;
+    display: block;
+    margin: 0px auto;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: "Courier New", Courier, monospace;
+    color: white;
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: firebrick;
+}
+select {
+    background-color: rgba(173, 54, 54, 0.15);
+    width: 40%;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px;
+    font-family: "Courier New", Courier, monospace;
+}
+.delivery > input{
+    background-color: rgba(173, 54, 54, 0.15);
+    width: 90%;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px;
+    font-family: "Courier New", Courier, monospace;
+}
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+h1,h2 {
+    text-align: center;
+}
+input[type="checkbox"] > image {
+    width: 20px;
+    height: 20px;
+}
+.main > img {
+    width: 30px;
+    height: 30px;
+}

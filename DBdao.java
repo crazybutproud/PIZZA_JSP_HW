@@ -60,15 +60,30 @@ public class DBdao { // класс для работы с бд
 
     public void addOrderClassic(OrderClassic orderClassic) { //добавления классического заказа(пицца,топпинг)
         try {
-            connection.createStatement().executeUpdate(getQueryFromOrderClassic(orderClassic));
+            connection.createStatement().executeUpdate(getQueryFromPizzaClassic(orderClassic));
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
 
-    private String getQueryFromOrderClassic(OrderClassic orderClassic) throws SQLException {
+    private String getQueryFromPizzaClassic(OrderClassic orderClassic) throws SQLException {
         return String.format("INSERT INTO order_pizza_classic (name_pizza,topping)  VALUES ( '%s', '%s')",
                 orderClassic.getName_pizza(), orderClassic.getTopping());
+
+    }
+
+
+    public void addOrderConstructor(OrderConstructor orderConstructor) { //добавления классического заказа(пицца,топпинг)
+        try {
+            connection.createStatement().executeUpdate(getQueryFromPizzaConstructor(orderConstructor));
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private String getQueryFromPizzaConstructor(OrderConstructor orderConstructor) throws SQLException {
+        return String.format("INSERT INTO order_pizza_constructor (toppings)  VALUES ( '%s')",
+                getStrToppings(orderConstructor.getTopping()));
 
     }
 
@@ -80,17 +95,15 @@ public class DBdao { // класс для работы с бд
         return builder.toString();
     }
 
-    public void addOrderConstructor(OrderConstructor orderConstructor) { //добавления классического заказа(пицца,топпинг)
-        try {
-            connection.createStatement().executeUpdate(getQueryFromOrderClassic(orderConstructor));
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+    public void addQueryFromOrderClassic(Client client, OrderClassic orderClassic) { //метод добавления клиента,классического заказа и формирования всех данных в одну таблицу
+        addClient(client);
+        addOrderClassic(orderClassic);
+        orderClassic.getId();
     }
 
-    private String getQueryFromOrderClassic(OrderConstructor orderConstructor) throws SQLException {
-        return String.format("INSERT INTO order_pizza_constructor (toppings)  VALUES ( '%s')",
-                 getStrToppings(orderConstructor.getTopping()));
-
+    public void addQueryFromOrderConstructor(Client client, OrderConstructor orderConstructor) { //метод добавления клиента,заказа через конструктор и формирования всех данных в одну таблицу
+        addClient(client);
+        addOrderConstructor(orderConstructor);
+        orderConstructor.getId();
     }
 }
