@@ -1,3 +1,4 @@
+<%@ page import="Model.OrderClassic" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -14,7 +15,7 @@
   <h2>Choose your pizza!
     <img src="https://img.icons8.com/?size=50&id=1911&format=png"></h2>
   <br>
-  <a href="do_it_yourself.jsp">Do it yourself</a> <br>
+  <a href="order_constructor.jsp">Do it yourself</a> <br>
   or <br>
   Choose pizza: <br>
   <select id="first-info" class="list">
