@@ -73,7 +73,7 @@ public class DBdao { // класс для работы с бд
     }
 
 
-    public void addOrderConstructor(OrderConstructor orderConstructor) { //добавления классического заказа(пицца,топпинг)
+    public void addOrderConstructor(OrderConstructor orderConstructor) { //добавления НЕ классического заказа(конструктор)
         try {
             connection.createStatement().executeUpdate(getQueryFromPizzaConstructor(orderConstructor));
         } catch (SQLException e) {

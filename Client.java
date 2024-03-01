@@ -1,5 +1,6 @@
 package Model;
 
+import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 
 public class Client { //класс клиента(данные о доставке)
